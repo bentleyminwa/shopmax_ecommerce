@@ -8,7 +8,7 @@ const Cart = () => {
     return <p className="text-center text-xl mt-6">Your cart is empty.</p>;
 
   return (
-    <main className="">
+    <main>
       <SearchComponent />
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
         <h1 className="text-2xl font-bold text-center mb-4">Shopping Cart</h1>

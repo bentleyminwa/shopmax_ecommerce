@@ -15,7 +15,7 @@ const Shop = () => {
             <CategoryComponent />
           </div>
         </div>
-        <div>
+        <div className="mb-10">
           <ProductList />
         </div>
       </section>

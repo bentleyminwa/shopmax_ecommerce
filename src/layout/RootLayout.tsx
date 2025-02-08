@@ -5,7 +5,7 @@ const RootLayout = () => {
   return (
     <main className="relative w-full">
       <Navbar />
-      <section className="font-primary pt-24 min-height-screen">
+      <section className="font-primary pt-24 min-h-screen">
         <Outlet />
       </section>
 
