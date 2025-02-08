@@ -14,10 +14,12 @@ import { clothes, electronics, jewelery, test1, test2, test3 } from "../images";
 export const appData = {
   menuItems: [
     {
+      id: "1",
       path: "/",
       name: "Home",
     },
     {
+      id: "2",
       path: "shop",
       name: "Shop",
     },

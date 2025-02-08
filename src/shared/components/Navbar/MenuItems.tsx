@@ -7,7 +7,7 @@ const MenuItems = () => {
   return (
     <ul className="hidden md:flex gap-5 lg:gap-10 text-xs text-jet font-semibold">
       {menuItems.map((item) => (
-        <li>
+        <li key={item.id}>
           <NavLink to={item.path} className="tracking-widest">
             {item.name}
           </NavLink>
