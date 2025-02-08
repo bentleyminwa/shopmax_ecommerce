@@ -10,13 +10,9 @@ const Shop = () => {
         <h3 className="text-sm font-semibold text-gray-500">/ Shop</h3>
       </div>
       <section className="w-10/12 mx-auto grid grid-cols-1">
-        <div className="flex justify-between items-center mb-5">
+        <div className="mb-5">
           <div>
             <CategoryComponent />
-          </div>
-          <div>
-            <div>filter</div>
-            <div>sort</div>
           </div>
         </div>
         <div>

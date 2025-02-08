@@ -15,7 +15,7 @@ const CategoryComponent = () => {
     <select
       onChange={(e) => setCategory(e.target.value)}
       value={category}
-      className="focus:outline-none border border-gray-200 p-1"
+      className="focus:outline-none border border-gray-200 p-1 tracking-wide text-sm text-gray-700 font-semibold"
     >
       {categoryOptions.map(({ label, value }) => {
         return (
