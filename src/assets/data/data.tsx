@@ -1,4 +1,11 @@
-import { FaCartShopping, FaCircleUser } from "react-icons/fa6";
+import {
+  FaCartShopping,
+  FaCircleUser,
+  FaFacebook,
+  FaInstagram,
+  FaLinkedin,
+  FaXTwitter,
+} from "react-icons/fa6";
 import { clothes, electronics, jewelery, test1, test2, test3 } from "../images";
 
 export const appData = {
@@ -61,6 +68,24 @@ export const appData = {
       message:
         "Superb customer service and great pricing! Best in the business.",
       image: test3,
+    },
+  ],
+  socials: [
+    {
+      url: "https://www.facebook.com/",
+      icon: <FaFacebook />,
+    },
+    {
+      url: "https://www.instagram.com/",
+      icon: <FaInstagram />,
+    },
+    {
+      url: "https://www.linkedin.com/",
+      icon: <FaLinkedin />,
+    },
+    {
+      url: "https://www.x.com/",
+      icon: <FaXTwitter />,
     },
   ],
 };
