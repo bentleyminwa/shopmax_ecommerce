@@ -19,7 +19,9 @@ const Home = () => {
             Featured Products
           </h2>
         </div>
-        <ProductList />
+        <div className="my-20">
+          <ProductList />
+        </div>
       </section>
       <TestimonialComponent />
     </>

@@ -4,8 +4,18 @@ const Shop = () => {
   return (
     <main>
       <SearchComponent />
+      <div className="w-10/12 mx-auto my-10">
+        <h1 className="text-4xl font-bold">Products</h1>
+        <h3 className="text-sm font-semibold text-gray-500">/ Shop</h3>
+      </div>
       <section className="w-10/12 mx-auto grid grid-cols-1">
-        <div>Categories</div>
+        <div className="flex justify-between items-center">
+          <div>Categories</div>
+          <div>
+            <div>filter</div>
+            <div>sort</div>
+          </div>
+        </div>
         <div>
           <ProductList />
         </div>
