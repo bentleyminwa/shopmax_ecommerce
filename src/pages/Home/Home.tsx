@@ -1,8 +1,13 @@
+import { useEffect } from "react";
 import { ProductList } from "../../shared/components";
 import { Banner, FeaturedListings } from "./components";
 import TestimonialComponent from "./components/Testimonial/Testimonial";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <Banner />
