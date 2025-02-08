@@ -1,9 +1,12 @@
 import {
   FaCartShopping,
   FaCircleUser,
+  FaEnvelope,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
+  FaLocationDot,
+  FaPhone,
   FaXTwitter,
 } from "react-icons/fa6";
 import { clothes, electronics, jewelery, test1, test2, test3 } from "../images";
@@ -86,6 +89,23 @@ export const appData = {
     {
       url: "https://www.x.com/",
       icon: <FaXTwitter />,
+    },
+  ],
+  contactInfos: [
+    {
+      title: "Find Us",
+      content: "Nairobi, Kenya",
+      icon: <FaLocationDot />,
+    },
+    {
+      title: "Call Us",
+      content: "+254 712 345 678",
+      icon: <FaPhone />,
+    },
+    {
+      title: "Mail Us",
+      content: "shopmax@gmail.com",
+      icon: <FaEnvelope />,
     },
   ],
 };
