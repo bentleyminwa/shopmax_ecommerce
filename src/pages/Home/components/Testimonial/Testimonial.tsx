@@ -5,7 +5,7 @@ const TestimonialComponent = () => {
   const { testimonials } = appData;
 
   return (
-    <section className="w-full ">
+    <section className="w-full mb-10">
       <h2 className="text-2xl font-bold uppercase tracking-wider text-center">
         <span className="border-b-2 pb-3">What Our Customers Say</span>
       </h2>
