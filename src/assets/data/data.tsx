@@ -21,10 +21,6 @@ export const appData = {
       path: "shop",
       name: "Shop",
     },
-    {
-      path: "contact",
-      name: "Contact",
-    },
   ],
   menuIcons: [
     {
