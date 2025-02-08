@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
-import { useState } from "react";
+import { atom, useAtom } from "jotai";
 import { Product } from "../types/types";
 
 async function fetchProducts(): Promise<Product[]> {
@@ -8,8 +8,10 @@ async function fetchProducts(): Promise<Product[]> {
   return data;
 }
 
+const categoryAtom = atom("all");
+
 export const useProducts = () => {
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useAtom(categoryAtom);
 
   const { data: products } = useQuery({
     queryKey: ["products"],
