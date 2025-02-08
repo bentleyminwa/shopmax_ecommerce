@@ -11,7 +11,7 @@ const ProductCard = ({ product }: ProductProps) => {
       key={product.id}
       className="border border-gray-200 rounded-lg w-full flex flex-col p-4 space-y-5 transform hover:scale-105 transition duration-300 ease-in-out"
     >
-      <Link to={`product/${product.id}`}>
+      <Link to={`/product/${product.id}`}>
         <img
           src={product.image}
           alt={product.title}

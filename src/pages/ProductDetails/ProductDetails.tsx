@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { SearchComponent } from "../../shared/components";
 import { useProduct } from "../../shared/hooks/useProduct";
 
 const ProductDetails = () => {
@@ -9,7 +10,8 @@ const ProductDetails = () => {
   }, []);
 
   return (
-    <main className="w-full py-10">
+    <main className="w-full pb-10">
+      <SearchComponent />
       <section className="w-11/12 md:w-10/12 lg:3/4 mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 p-10 bg-gray-200">
         <div className="w-full flex justify-center items-center">
           <img

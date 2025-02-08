@@ -1,18 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { hero } from "../../../../assets/images";
+import { SearchComponent } from "../../../../shared/components";
 
 const Banner = () => {
   const navigate = useNavigate();
 
   return (
     <header className="relative">
-      <form className="w-full flex justify-center items-center">
-        <input
-          type="text"
-          placeholder="search products"
-          className="border border-gray-200 my-5 p-3 w-1/2 md:w-1/3 rounded-sm focus:outline-none text-gray-500 tracking-wider"
-        />
-      </form>
+      <SearchComponent />
       <img src={hero} alt="hero" className="w-full h-[60vh] object-cover" />
       <div className="absolute top-[60%] left-10 text-white space-y-3">
         <h2 className="text-5xl font-bold tracking-wide">Final Offer!</h2>

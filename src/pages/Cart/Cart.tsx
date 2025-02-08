@@ -1,5 +1,12 @@
+import { SearchComponent } from "../../shared/components";
+
 const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <main>
+      <SearchComponent />
+      <div>cart</div>
+    </main>
+  );
 };
 
 export default Cart;
