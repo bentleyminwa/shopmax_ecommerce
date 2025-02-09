@@ -1,5 +1,6 @@
 import { FaMinus, FaPlus, FaRegTrashCan } from "react-icons/fa6";
 import { useCart } from "../../../shared/hooks/useCart";
+import CartSummary from "./CartSummary";
 
 const CartItems = () => {
   const { cart, removeFromCart } = useCart();
@@ -38,6 +39,9 @@ const CartItems = () => {
           </button>
         </div>
       ))}
+      <div>
+        <CartSummary />
+      </div>
     </section>
   );
 };
