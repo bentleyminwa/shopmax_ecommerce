@@ -1,58 +1,15 @@
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  GoogleAuthProvider,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-} from "firebase/auth";
-import { SubmitHandler, useForm } from "react-hook-form";
 import { FaGoogle } from "react-icons/fa6";
-import { z } from "zod";
-import { auth } from "../../services/firebase";
-
-const schema = z.object({
-  email: z.string().email(),
-  password: z
-    .string()
-    .min(8, "Password must be at least 8 characters long")
-    .regex(
-      /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/,
-      "Password must contain at least one letter and one number"
-    ),
-});
-
-type FormFields = z.infer<typeof schema>;
+import { useAuth } from "../../shared/hooks/useAuth";
 
 const Login = () => {
   const {
     register,
     handleSubmit,
-    reset,
-    formState: { errors, isSubmitting },
-  } = useForm<FormFields>({
-    resolver: zodResolver(schema),
-  });
-
-  const onSignIn: SubmitHandler<FormFields> = async (data) => {
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    try {
-      await signInWithEmailAndPassword(auth, data.email, data.password);
-      reset();
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  async function handleGoogleSignIn() {
-    const googleProvider = new GoogleAuthProvider();
-
-    try {
-      await signInWithPopup(auth, googleProvider);
-      reset();
-    } catch (err) {
-      console.error(err);
-    }
-  }
+    onSignIn,
+    handleGoogleSignIn,
+    errors,
+    isSubmitting,
+  } = useAuth();
 
   return (
     <section className="w-full">

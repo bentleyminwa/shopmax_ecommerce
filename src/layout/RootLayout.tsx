@@ -8,7 +8,6 @@ const RootLayout = () => {
       <section className="font-primary pt-24 min-h-screen">
         <Outlet />
       </section>
-
       <Footer />
     </main>
   );
