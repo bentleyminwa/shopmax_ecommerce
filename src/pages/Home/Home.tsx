@@ -1,9 +1,13 @@
 import { useEffect } from "react";
-import { ProductList } from "../../shared/components";
+import { Link } from "react-router-dom";
+import { ProductCard } from "../../shared/components";
+import { useProducts } from "../../shared/hooks/useProducts";
 import { Banner, FeaturedListings } from "./components";
 import TestimonialComponent from "./components/Testimonial/Testimonial";
 
 const Home = () => {
+  const { homeProducts: products } = useProducts();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,7 +24,16 @@ const Home = () => {
           </h2>
         </div>
         <div className="my-20">
-          <ProductList />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-7">
+            {products?.map((product) => (
+              <ProductCard product={product} key={product.id} />
+            ))}
+          </div>
+          <div className="mt-5">
+            <Link to={"shop"} className="underline">
+              View All
+            </Link>
+          </div>
         </div>
       </section>
       <TestimonialComponent />

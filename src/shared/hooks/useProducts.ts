@@ -23,8 +23,11 @@ export const useProducts = () => {
       ? products
       : products?.filter((product) => product.category === category);
 
+  const homeProducts = filteredProducts?.slice(0, 8);
+
   return {
     filteredProducts,
+    homeProducts,
     category,
     setCategory,
     isPending,
