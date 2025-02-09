@@ -30,14 +30,14 @@ export const appData = {
   ],
   menuIcons: [
     {
-      path: "login",
+      path: "profile",
       icon: <FaUser />,
-      name: "Login",
+      name: "Profile",
     },
     {
       path: "cart",
       icon: <FaCartShopping />,
-      name: "Contact",
+      name: "Cart",
     },
   ],
   featuredCategories: [

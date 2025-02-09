@@ -1,11 +1,13 @@
 import { NavLink } from "react-router-dom";
 import { appData } from "../../../assets/data/data";
+import { useAuth } from "../../hooks/useAuth";
 import { useCart } from "../../hooks/useCart";
 import { HamburgerComponent } from "./index";
 
 const NavIcons = () => {
   const { menuIcons } = appData;
   const { cart } = useCart();
+  const { user } = useAuth();
 
   return (
     <div className="flex justify-center items-center gap-4">
@@ -26,6 +28,9 @@ const NavIcons = () => {
           </li>
         ))}
       </ul>
+      <div className="text-xs font-semibold tracking-wider">
+        {user?.displayName}
+      </div>
       <HamburgerComponent />
     </div>
   );
