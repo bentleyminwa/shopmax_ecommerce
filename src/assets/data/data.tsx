@@ -1,12 +1,12 @@
 import {
   FaCartShopping,
-  FaCircleUser,
   FaEnvelope,
   FaFacebook,
   FaInstagram,
   FaLinkedin,
   FaLocationDot,
   FaPhone,
+  FaUser,
   FaXTwitter,
 } from "react-icons/fa6";
 import { clothes, electronics, jewelery, test1, test2, test3 } from "../images";
@@ -27,7 +27,7 @@ export const appData = {
   menuIcons: [
     {
       path: "login",
-      icon: <FaCircleUser />,
+      icon: <FaUser />,
       name: "Login",
     },
     {
