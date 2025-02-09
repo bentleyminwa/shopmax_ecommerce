@@ -11,12 +11,13 @@ const MenuItems = () => {
           <NavLink
             to={item.path}
             className={({ isActive }) =>
-              `tracking-widest pb-1 hover:border-b-2 ${
+              `tracking-widest pb-2 hover:border-b-2 flex items-center gap-2 ${
                 isActive ? "border-b-2" : ""
               }`
             }
           >
-            {item.name}
+            <span className="text-xl">{item.icon}</span>
+            <span>{item.name}</span>
           </NavLink>
         </li>
       ))}

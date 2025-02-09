@@ -2,10 +2,12 @@ import {
   FaCartShopping,
   FaEnvelope,
   FaFacebook,
+  FaHouse,
   FaInstagram,
   FaLinkedin,
   FaLocationDot,
   FaPhone,
+  FaStore,
   FaUser,
   FaXTwitter,
 } from "react-icons/fa6";
@@ -17,11 +19,13 @@ export const appData = {
       id: "1",
       path: "/",
       name: "Home",
+      icon: <FaHouse />,
     },
     {
       id: "2",
       path: "shop",
       name: "Shop",
+      icon: <FaStore />,
     },
   ],
   menuIcons: [
