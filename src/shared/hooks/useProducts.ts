@@ -13,7 +13,7 @@ const categoryAtom = atom("all");
 export const useProducts = () => {
   const [category, setCategory] = useAtom(categoryAtom);
 
-  const { data: products } = useQuery({
+  const { data: products, isPending } = useQuery({
     queryKey: ["products"],
     queryFn: fetchProducts,
   });
@@ -27,5 +27,6 @@ export const useProducts = () => {
     filteredProducts,
     category,
     setCategory,
+    isPending,
   };
 };

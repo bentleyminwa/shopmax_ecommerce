@@ -11,12 +11,13 @@ const fetchProduct = async (id: string): Promise<Product> => {
 export const useProduct = () => {
   const { id } = useParams<{ id: string }>();
 
-  const { data: product } = useQuery({
+  const { data: product, isPending } = useQuery({
     queryKey: ["product", id],
     queryFn: () => fetchProduct(id!),
   });
 
   return {
     product,
+    isPending,
   };
 };
