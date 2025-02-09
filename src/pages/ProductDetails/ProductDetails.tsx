@@ -1,9 +1,11 @@
 import { useEffect } from "react";
 import { SearchComponent } from "../../shared/components";
+import { useCart } from "../../shared/hooks/useCart";
 import { useProduct } from "../../shared/hooks/useProduct";
 
 const ProductDetails = () => {
   const { product } = useProduct();
+  const { addToCart } = useCart();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -31,7 +33,12 @@ const ProductDetails = () => {
           <p className="text-sm tracking-wide leading-6 text-gray-800 mb-10">
             {product?.description}
           </p>
-          <button className="bg-black text-white p-3 uppercase tracking-wider cursor-pointer">
+          <button
+            onClick={() =>
+              product?.id && addToCart({ ...product, quantity: 1 })
+            }
+            className="bg-black text-white p-3 uppercase tracking-wider cursor-pointer"
+          >
             Add To Cart
           </button>
         </div>
