@@ -25,7 +25,13 @@ const HamburgerComponent = () => {
             <ul className="flex flex-col gap-5 text-xs text-jet font-semibold tracking-wider">
               {menuItems.map((item) => (
                 <li>
-                  <Link to={item.path}>{item.name}</Link>
+                  <Link
+                    to={item.path}
+                    className="flex gap-2 hover:scale-110 transition duration-200 ease-in-out"
+                  >
+                    <span className="">{item.icon}</span>
+                    <span>{item.name}</span>
+                  </Link>
                 </li>
               ))}
             </ul>
