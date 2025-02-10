@@ -30,7 +30,7 @@ const Home = () => {
             ))}
           </div>
           <div className="mt-5">
-            <Link to={"shop"} className="underline">
+            <Link to={"shop"} className="underline text-sm tracking-wider">
               View All
             </Link>
           </div>

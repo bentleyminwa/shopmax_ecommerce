@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { FaGoogle } from "react-icons/fa6";
 import { useAuth } from "../../shared/hooks/useAuth";
 import { useLogin } from "../../shared/hooks/useLogin";
@@ -12,6 +13,10 @@ const Profile = () => {
     isSubmitting,
   } = useLogin();
   const { user, logout } = useAuth();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <section className="w-full">

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ProductList, SearchComponent } from "../../shared/components";
 import DataLoader from "../../shared/components/Loader/DataLoader";
 import { useProducts } from "../../shared/hooks/useProducts";
@@ -5,6 +6,10 @@ import CategoryComponent from "./components/CategoryComponent";
 
 const Shop = () => {
   const { isPending } = useProducts();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main>
