@@ -4,7 +4,14 @@ import {
   Route,
 } from "react-router-dom";
 import RootLayout from "../layout/RootLayout";
-import { Cart, Home, ProductDetails, Profile, Shop } from "../pages";
+import {
+  Cart,
+  Custom404Page,
+  Home,
+  ProductDetails,
+  Profile,
+  Shop,
+} from "../pages";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -14,6 +21,8 @@ export const router = createBrowserRouter(
       <Route path="cart" element={<Cart />} />
       <Route path="product/:id" element={<ProductDetails />} />
       <Route path="profile" element={<Profile />} />
+
+      <Route path="*" element={<Custom404Page />} />
     </Route>
   )
 );
