@@ -66,7 +66,7 @@ The development server should start on http://localhost:5173 (or another availab
 
 ## 🚀 Live Preview
 
-https://shopmax.netlify.app/
+https://shopmax3.netlify.app/
 
 ## 🏁 Conclusion
 
