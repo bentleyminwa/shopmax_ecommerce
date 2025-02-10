@@ -11,7 +11,7 @@ import {
   FaUser,
   FaXTwitter,
 } from "react-icons/fa6";
-import { clothes, electronics, jewelery, test1, test2, test3 } from "../images";
+import { clothes, daryl, electronics, jewelery, negan, rick } from "../images";
 
 export const appData = {
   menuItems: [
@@ -59,20 +59,22 @@ export const appData = {
   ],
   testimonials: [
     {
-      name: "Maggie Rhee",
-      message: "This store has amazing products! Highly recommend.",
-      image: test1,
-    },
-    {
       name: "Rick Grimes",
-      message: "Fantastic quality and fast delivery. Will shop again!",
-      image: test2,
+      message:
+        "This store has amazing products! Highly recommend. My son Carl recommends it too.",
+      image: rick,
     },
     {
-      name: "Judith Grimes",
+      name: "Daryl Dixon",
       message:
-        "Superb customer service and great pricing! Best in the business.",
-      image: test3,
+        "Fantastic quality and fast delivery. Me and Carol always visit their stores.",
+      image: daryl,
+    },
+    {
+      name: "Negan Smith",
+      message:
+        "Superb customer service and great pricing! They are our saviours. Made shopping easy.",
+      image: negan,
     },
   ],
   socials: [

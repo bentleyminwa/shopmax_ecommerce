@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { hero } from "../../../../assets/images";
-import { SearchComponent } from "../../../../shared/components";
+import { Button, SearchComponent } from "../../../../shared/components";
 
 const Banner = () => {
   const navigate = useNavigate();
@@ -15,12 +15,7 @@ const Banner = () => {
           up to <span className="text-3xl text-black font-bold">50%</span> sale
           for all electronics
         </p>
-        <button
-          onClick={() => navigate("shop")}
-          className="bg-black p-3 uppercase text-sm tracking-widest cursor-pointer"
-        >
-          Shop Now
-        </button>
+        <Button onClick={() => navigate("shop")}>Shop Now</Button>
       </div>
     </header>
   );

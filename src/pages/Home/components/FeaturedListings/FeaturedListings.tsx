@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { appData } from "../../../../assets/data/data";
+import { Button } from "../../../../shared/components";
 
 const FeaturedListings = () => {
   const { featuredCategories } = appData;
@@ -20,12 +21,7 @@ const FeaturedListings = () => {
               <p>
                 <span className="text-xl font-bold">50%</span> off
               </p>
-              <button
-                onClick={() => navigate("shop")}
-                className="bg-black p-3 uppercase text-sm tracking-widest cursor-pointer text-white"
-              >
-                Shop Now
-              </button>
+              <Button onClick={() => navigate("shop")}>Shop Now</Button>
             </div>
           </div>
         );

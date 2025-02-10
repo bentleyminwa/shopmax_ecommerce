@@ -1,3 +1,4 @@
+import { Button } from "../../../shared/components";
 import { useCart } from "../../../shared/hooks/useCart";
 
 const CartSummary = () => {
@@ -19,9 +20,7 @@ const CartSummary = () => {
       <p className="border-b border-gray-300 pb-4 mb-4 text-sm text-gray-700 font-semibold ">
         Total: <span>$ {result.toFixed(2)}</span>
       </p>
-      <button className="bg-black text-white p-2 text-sm font-semibold uppercase">
-        Proceed To Checkout
-      </button>
+      <Button>Proceed To Checkout</Button>
     </div>
   );
 };

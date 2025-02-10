@@ -23,7 +23,12 @@ export const useProducts = () => {
       ? products
       : products?.filter((product) => product.category === category);
 
-  const homeProducts = filteredProducts?.slice(0, 8);
+  const randomizeProducts = (products: Product[] | undefined) => {
+    if (!products) return [];
+    return products.sort(() => Math.random() - 0.5);
+  };
+
+  const homeProducts = randomizeProducts(filteredProducts).slice(0, 4);
 
   return {
     filteredProducts,

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { emptyCart } from "../../../assets/images";
+import { Button } from "../../../shared/components";
 
 const CartEmpty = () => {
   const navigate = useNavigate();
@@ -16,12 +17,7 @@ const CartEmpty = () => {
             Start adding your favorite items from our store and enjoy a great
             shopping experience. ✨🛒
           </p>
-          <button
-            onClick={() => navigate("/shop")}
-            className="border p-2 text-xs tracking-wider uppercase font-semibold bg-black text-white"
-          >
-            Continue Shopping
-          </button>
+          <Button onClick={() => navigate("/shop")}>Continue Shopping</Button>
         </div>
       </div>
     </section>

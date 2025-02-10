@@ -11,7 +11,7 @@ const MenuItems = () => {
           <NavLink
             to={item.path}
             className={({ isActive }) =>
-              `tracking-widest pb-2 hover:border-b-2 flex items-center gap-2 ${
+              `tracking-widest pb-2 hover:scale-110 transition duration-200 ease-in-out flex items-center gap-2  ${
                 isActive ? "border-b-2" : ""
               }`
             }

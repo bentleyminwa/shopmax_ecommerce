@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
 import { Product } from "../../types/types";
+import Button from "../Button/Button";
 
 type ProductProps = {
   product: Product;
@@ -21,12 +22,9 @@ const ProductCard = ({ product }: ProductProps) => {
       <h2 className="text-sm font-semibold">{product.title}</h2>
       <div className="flex justify-between items-center">
         <p className="text-lg font-semibold text-gray-500">$ {product.price}</p>
-        <button
-          onClick={() => addToCart({ ...product, quantity: 1 })}
-          className="bg-black text-white py-2 px-3 uppercase text-xs tracking-wide cursor-pointer"
-        >
-          Add to Cart
-        </button>
+        <Button onClick={() => addToCart({ ...product, quantity: 1 })}>
+          Add To Cart
+        </Button>
       </div>
     </div>
   );
