@@ -1,11 +1,3 @@
-export const containerVariants = {
-  animate: {
-    transition: {
-      staggerChildren: 0.5,
-    },
-  },
-};
-
 export const BannerVariants = {
   hidden: {
     opacity: 0,
@@ -30,34 +22,6 @@ export const SearchVariants = {
       delay: 0.5,
       duration: 0.5,
       stiffness: 200,
-    },
-  },
-};
-
-export const listingVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-};
-
-export const ProductVariants = {
-  hidden: {
-    opacity: 0,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
     },
   },
 };
