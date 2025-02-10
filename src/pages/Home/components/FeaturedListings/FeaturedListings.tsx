@@ -1,6 +1,8 @@
+import { motion } from "motion/react";
 import { useNavigate } from "react-router-dom";
 import { appData } from "../../../../assets/data/data";
 import { Button } from "../../../../shared/components";
+import { listingVariants } from "../../../../shared/motion/motion";
 
 const FeaturedListings = () => {
   const { featuredCategories } = appData;
@@ -10,7 +12,13 @@ const FeaturedListings = () => {
     <section className="w-10/12 max-h-fit grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 my-10 mx-auto">
       {featuredCategories.map((feature) => {
         return (
-          <div key={feature.title} className="border border-gray-200 relative">
+          <motion.div
+            variants={listingVariants}
+            initial="hidden"
+            whileInView="visible"
+            key={feature.title}
+            className="border border-gray-200 relative"
+          >
             <img
               src={feature.image}
               alt=""
@@ -23,7 +31,7 @@ const FeaturedListings = () => {
               </p>
               <Button onClick={() => navigate("shop")}>Shop Now</Button>
             </div>
-          </div>
+          </motion.div>
         );
       })}
     </section>

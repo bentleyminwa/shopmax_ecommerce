@@ -1,5 +1,7 @@
+import { motion } from "motion/react";
 import { RiDoubleQuotesL } from "react-icons/ri";
 import { appData } from "../../../../assets/data/data";
+import { TestimonialVariants } from "../../../../shared/motion/motion";
 
 const TestimonialComponent = () => {
   const { testimonials } = appData;
@@ -11,7 +13,10 @@ const TestimonialComponent = () => {
       </h2>
       <div className="bg-gray-200 w-full mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 p-10">
         {testimonials.map((testimonial) => (
-          <div
+          <motion.div
+            variants={TestimonialVariants}
+            initial="hidden"
+            whileInView="visible"
             key={testimonial.name}
             className="bg-white p-10 rounded-lg space-y-5"
           >
@@ -29,7 +34,7 @@ const TestimonialComponent = () => {
                 {testimonial.name}
               </h4>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

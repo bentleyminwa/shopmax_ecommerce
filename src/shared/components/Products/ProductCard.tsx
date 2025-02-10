@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useCart } from "../../hooks/useCart";
+
 import { Product } from "../../types/types";
 import Button from "../Button/Button";
 

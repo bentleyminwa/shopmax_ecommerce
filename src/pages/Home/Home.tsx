@@ -2,8 +2,7 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ProductCard } from "../../shared/components";
 import { useProducts } from "../../shared/hooks/useProducts";
-import { Banner, FeaturedListings } from "./components";
-import TestimonialComponent from "./components/Testimonial/Testimonial";
+import { Banner, FeaturedListings, TestimonialComponent } from "./components";
 
 const Home = () => {
   const { homeProducts: products } = useProducts();

@@ -1,8 +1,15 @@
+import { motion } from "motion/react";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { SearchVariants } from "../../motion/motion";
 
 const SearchComponent = () => {
   return (
-    <form className="w-full flex justify-center items-center">
+    <motion.form
+      variants={SearchVariants}
+      initial="hidden"
+      animate="visible"
+      className="w-full flex justify-center items-center"
+    >
       <input
         type="text"
         placeholder="search products"
@@ -10,7 +17,7 @@ const SearchComponent = () => {
       />
 
       <FaMagnifyingGlass className="text-xl -ml-8 bg-white" />
-    </form>
+    </motion.form>
   );
 };
 
