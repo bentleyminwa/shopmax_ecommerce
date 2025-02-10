@@ -12,6 +12,7 @@ import {
   Profile,
   Shop,
 } from "../pages";
+import ErrorComponent from "../shared/components/Error/ErrorComponent";
 
 export const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,7 +20,11 @@ export const router = createBrowserRouter(
       <Route index element={<Home />} />
       <Route path="shop" element={<Shop />} />
       <Route path="cart" element={<Cart />} />
-      <Route path="product/:id" element={<ProductDetails />} />
+      <Route
+        path="product/:id"
+        element={<ProductDetails />}
+        errorElement={<ErrorComponent />}
+      />
       <Route path="profile" element={<Profile />} />
 
       <Route path="*" element={<Custom404Page />} />

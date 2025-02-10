@@ -5,6 +5,7 @@ import { Product } from "../types/types";
 
 const fetchProduct = async (id: string): Promise<Product> => {
   const { data } = await axios.get(`https://fakestoreapi.com/products/${id}`);
+
   return data;
 };
 
